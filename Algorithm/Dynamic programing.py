@@ -10,3 +10,4 @@ coin = [0]*10001
 for i in range(M+1):
 
     for money in list:
+        print(3)
