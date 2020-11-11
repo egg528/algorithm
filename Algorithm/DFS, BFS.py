@@ -50,6 +50,7 @@ def dfs(graph, start, visted):
         if not visited[i]:
             dfs(graph, i, visited)
 
+
 #BFS(Breath-First-Search)
 graph = [[],
          [2, 3, 8],
@@ -78,3 +79,5 @@ def bfs(graph, start, visited):
                 queue.append(i)
                 visited[i] = True
 
+
+dfs(graph, 1, visited)
