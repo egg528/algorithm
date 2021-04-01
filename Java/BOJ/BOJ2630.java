@@ -10,12 +10,15 @@ class Main{
 	static int blue = 0;
 	
 	public static void main(String args[]) throws IOException{
+		
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		int N = Integer.valueOf(br.readLine());
 		
 		String[][] arr = new String[N][N];
 		
+		//배열 입력 받기
 		for(int i = 0; i < N; i++) {
 			arr[i] = br.readLine().split(" ");
 		}
@@ -24,8 +27,6 @@ class Main{
 		
 		System.out.println(white);
 		System.out.println(blue);
-		
-		
 	}
 	public static void checkOneColor(String[][] arr, int N, int startCol, int startRow) {
 		if(N == 0) {
@@ -34,6 +35,7 @@ class Main{
 		
 		boolean OneColor = true;
 		
+		//배열의 주어진 범위를 순회하며 한 가지 색으로만 되었는 지 확인
 		String before = arr[startRow][startCol];
 		for(int i = startRow; i < N+startRow; i++) {
 			for(int k = startCol; k < N+startCol; k++) {
@@ -50,6 +52,7 @@ class Main{
 		
 		
 		
+		// 한 가지 색으로먼 되어 있다면 해당 색종이 개수++, return
 		if(OneColor == true ) {
 			if(arr[startRow][startCol].equals("1")) {
 				blue++;
@@ -58,6 +61,8 @@ class Main{
 			}
 			return;
 		}
+		
+		// 한 가지 색으로만 구성되지 않았다면 4등분 해서 재귀
 		
 		int half = N/2;
 		
