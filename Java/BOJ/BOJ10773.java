@@ -1,6 +1,6 @@
 package BOJ;
 
-import java.util.ArrayList;
+import java.util.*;
 import java.util.Scanner;
 
 public class Main {	
