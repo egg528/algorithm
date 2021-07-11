@@ -34,4 +34,3 @@ class Main{
 			System.out.println(DP[N-1]);
 		}
 	}
-}
