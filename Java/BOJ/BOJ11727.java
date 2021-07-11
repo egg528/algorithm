@@ -5,11 +5,10 @@ import java.io.*;
 
 class Main{	
 	public static void main(String args[]){
-		Scanner sc = new Scanner(System.in);
-		
+		Scanner sc = new Scanner(System.in);	
 		int N = sc.nextInt();
 		
-		int[] DP = new int[N+1];
+		int[] DP = new int[1001];
 		DP[1] = 1;
 		DP[2] = 3;
 		
